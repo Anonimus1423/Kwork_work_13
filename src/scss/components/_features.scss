@@ -1,0 +1,139 @@
+.features {
+  padding-bottom: 120px;
+
+  &__title {
+    position: relative;
+    margin: 0;
+    margin-bottom: 80px;
+    padding-left: 23px;
+    color: #F0F0F0;
+    font-size: 40px;
+    font-weight: 600;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0;
+      top: 18px;
+      background-image: url(../img/point.svg);
+
+      @include mobile {
+        top: 10px;
+      }
+    }
+
+    @include small-tablet {
+      font-size: 32px;
+    }
+
+    @include mobile {
+      font-size: 22px;
+    }
+  }
+
+  &__content {
+    padding: 30px 20px 70px 20px;
+    margin-bottom: 120px;
+    border-radius: 5px;
+    background: #0D0E17;
+
+    @include tablet {
+      padding: 30px 10px 70px 10px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+
+    @include small-tablet {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-top: 35px;
+    max-width: 311px;
+    color: #F0F0F0;
+    font-size: 18px;
+    font-weight: 400;
+
+    @include small-tablet {
+      font-size: 16px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__img {
+    margin: 0 auto;
+    height: 115px;
+  }
+
+  &__citation {
+    max-width: 1180px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    color: #54555F;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    transition: all 1s ease-in-out;
+
+    @include small-tablet {
+      font-size: 32px;
+    }
+
+    @include mobile {
+      font-size: 22px;
+    }
+  }
+
+  &__accent {
+    transition: all 1s ease-in-out;
+    color: #54555F;
+  }
+
+  &__name {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 6px;
+    color: #F0F0F0;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+
+    @include small-tablet {
+      font-size: 18px;
+    }
+  }
+
+  &__position {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: #54555F;
+    font-size: 14px;
+    font-weight: 400;
+
+    @include small-tablet {
+      font-size: 12px;
+    }
+  }
+}

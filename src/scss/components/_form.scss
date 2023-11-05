@@ -1,0 +1,260 @@
+.form {
+  padding-bottom: 120px;
+
+  @include mobile {
+    padding-bottom: 90px;
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    margin-bottom: 80px;
+    padding-left: 23px;
+    color: #F0F0F0;
+    font-size: 40px;
+    font-weight: 600;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0;
+      top: 18px;
+      background-image: url(../img/point-white.svg);
+    }
+
+    @include small-tablet {
+      font-size: 32px;
+    }
+
+    @include mobile {
+      font-size: 22px;
+    }
+  }
+
+  &__svg {
+    width: 12px;
+    height: 12px;
+    z-index: 1;
+
+
+    &--right {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    right: -30px;
+
+
+    &:hover>.form__icon-left {
+      transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+    }
+
+    &:hover>.form__icon-right {
+      transform: translate3d(-45px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+    }
+
+    &:hover>.form__btn {
+      transform: translate3d(-45px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+    }
+
+  }
+
+  &__btn {
+    padding: 10px 21px;
+    border-radius: 2px;
+    background-color: #F0F0F0;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all .4s ease-in-out;
+    transform: translate3d(0rem, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+
+    z-index: 2;
+
+    @include small-tablet {
+      font-size: 16px;
+      padding: 12px 21px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      height: 37px;
+      padding: 12px 10px 12px 10px;
+    }
+  }
+
+  &__icon-left {
+    margin-right: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    background: #F0F0F0;
+    width: 46px;
+    height: 42px;
+    transition: all .4s ease-in-out;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+
+    @include mobile {
+      width: 37px;
+      height: 38px;
+    }
+  }
+
+  &__icon-right {
+    margin-left: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    background: #F0F0F0;
+    width: 46px;
+    height: 42px;
+    transition: all .4s ease-in;
+    transform: translate3d(-32px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+
+    @include mobile {
+      width: 37px;
+      height: 38px;
+    }
+  }
+
+  &__inside {
+    position: relative;
+    overflow: hidden;
+
+    &:hover>.form__inner {
+      bottom: 20px;
+      left: 20px;
+    }
+
+    &:hover .form__img {
+      transform: scale(1.2);
+    }
+  }
+
+  &__form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__content {
+    padding: 30px 20px;
+    position: relative;
+    border-radius: 5px;
+    background: #0D0E17;
+
+    @include tablet {
+      padding: 30px 10px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      left: -1px;
+      top: -1px;
+      background-image: url(../img/trigle-org.svg);
+      z-index: 10;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -101;
+      margin: -1px;
+      border-radius: inherit;
+      background-image: -o-linear-gradient(310deg, rgb(219, 150, 65) 48%, rgb(16, 17, 24) 90%);
+      background-image: linear-gradient(140deg, rgb(219, 150, 65) 48%, rgb(16, 17, 24) 90%);
+    }
+  }
+
+  &__input {
+    background-color: #0D0E17 !important;
+    max-width: 480px;
+    width: 100%;
+    padding: 15px 23px;
+    background: none;
+    background-image: url(../img/acardion.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: contain;
+    color: #F0F0F0;
+    font-size: 16px;
+    font-weight: 500;
+
+
+
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &::placeholder {
+      color: #54555F;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    &--active {
+      color: #670505;
+
+      &::placeholder {
+        color: #670505;
+      }
+    }
+
+  }
+
+  &__valid {
+    position: absolute;
+    color: #670505;
+    font-size: 16px;
+    font-weight: 500;
+    top: -20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-in;
+
+    &--active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    margin-top: 20px;
+    color: #54555F;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &__link {
+    color: #F0F0F0;
+  }
+
+  &__btns {
+    position: relative;
+    left: -28px;
+  }
+}

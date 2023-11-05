@@ -1,0 +1,40 @@
+.letters {
+  margin-bottom: 60px;
+
+  &__content {
+    display: flex;
+    overflow: visible;
+    gap: 20px;
+  }
+
+  &__img {
+    min-width: 325px;
+    display: block;
+    transition: all 1s ease-in-out;
+
+    @include small-tablet {
+      min-width: 220px;
+
+    }
+
+    &:nth-child(2) {
+      transform: translateX(-100px);
+    }
+
+    &:nth-child(2) {
+      transform: translateX(-300px);
+    }
+
+    &:nth-child(3) {
+      transform: translateX(-500px);
+    }
+
+    &:nth-child(4) {
+      transform: translateX(-800px);
+    }
+
+    &:nth-child(5) {
+      transform: translateX(-1000px);
+    }
+  }
+}

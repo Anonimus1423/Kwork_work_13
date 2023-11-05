@@ -1,0 +1,58 @@
+.comp {
+  padding-top: 100px;
+  padding-bottom: 150px;
+
+  @include mobile {
+    padding-bottom: 120px;
+  }
+
+  &__title {
+    margin: 0;
+    position: relative;
+    margin: 0;
+    margin-bottom: 40px;
+    padding-left: 23px;
+    color: #F0F0F0;
+    font-size: 40px;
+    font-weight: 600;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0;
+      top: 18px;
+      background-image: url(../img/point.svg);
+
+      @include mobile {
+        top: 10px;
+      }
+    }
+
+    @include small-tablet {
+      font-size: 32px;
+    }
+
+    @include mobile {
+      font-size: 22px;
+    }
+  }
+
+  &__text {
+    max-width: 852px;
+    margin: 0;
+    margin-bottom: 20px;
+    color: #F0F0F0;
+    font-size: 16px;
+    font-weight: 400;
+
+    &:nth-child(4) {
+      margin-bottom: 35px;
+    }
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+  }
+}

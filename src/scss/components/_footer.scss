@@ -1,0 +1,253 @@
+.footer {
+  border-radius: 5px;
+  background: #0D0E17;
+  padding: 30px 0px;
+
+
+  &__svg {
+    width: 12px;
+    height: 12px;
+    z-index: 1;
+    transition: all .4s ease-in-out;
+
+
+
+    &--right {
+      transform: rotate(90deg);
+
+
+    }
+  }
+
+  &__icon {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+  &__btns {
+    position: relative;
+    right: -7px;
+
+    @include big-desktop {
+      top: 10px;
+      right: 30px;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    right: -30px;
+
+
+    &:hover>.footer__icon-left {
+      transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+    }
+
+    &:hover>.footer__icon-right {
+      transform: translate3d(-45px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+    }
+
+    &:hover>.footer__btn {
+      transform: translate3d(-45px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+    }
+
+  }
+
+  &__btn {
+    padding: 8px 21px;
+    border-radius: 2px;
+    background-color: #F0F0F0;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all .4s ease-in-out;
+    transform: translate3d(0rem, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+
+    @include mobile {
+      font-size: 14px;
+      padding: 10px 21px;
+      height: 35px;
+    }
+
+  }
+
+  &__icon-left {
+    margin-right: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    background: #F0F0F0;
+    width: 40px;
+    height: 36px;
+    transition: all .4s ease-in-out;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+
+    @include mobile {
+      width: 40px;
+      height: 35px;
+    }
+  }
+
+  &__icon-right {
+    margin-left: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    background: #F0F0F0;
+    width: 40px;
+    height: 36px;
+    transition: all .4s ease-in;
+    transform: translate3d(-25px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+
+    @include mobile {
+      width: 40px;
+      height: 35px;
+    }
+  }
+
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    @include big-desktop{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+
+
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+    @include big-desktop {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 40px;
+
+      @include tablet {
+        margin: 0;
+      }
+    }
+  }
+
+  &__link {
+    color: #F0F0F0;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+
+    &:hover {
+      &::after {
+        width: 100%;
+        visibility: visible;
+      }
+    }
+
+    &::after {
+      transition: all .3s ease-in-out;
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      bottom: -1px;
+      left: 0;
+      background-color: #F0F0F0;
+      visibility: hidden;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 65px;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__phone {
+    margin-bottom: 20px;
+    display: block;
+    color: #DB9641;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__mail {
+    margin-bottom: 20px;
+    display: block;
+    color: #F0F0F0;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__text {
+    display: block;
+    margin: 0;
+    color: #F0F0F0;
+    text-align: right;
+    font-size: 16px;
+
+    &:first-child {
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      text-align: left;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+  }
+
+  &__svg {
+    &:not(:last-child) {
+      margin-right: 18px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #F0F0F0;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__copirait {
+    color: #54555F;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}

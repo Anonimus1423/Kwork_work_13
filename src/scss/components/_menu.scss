@@ -1,0 +1,253 @@
+.menu {
+  position: absolute;
+  display: none;
+  width: 96vw;
+  height: 490px;
+
+  top: 175px;
+
+  z-index: 11;
+  background: #0D0E17;
+  border-radius: 5px;
+  left: 15px;
+
+
+  @include small-tablet {
+    width: 96.4vw;
+    height: 490px;
+  }
+
+  @include mobile {
+    height: 480px;
+    width: 94.4vw;
+  }
+
+  &--active {
+    display: flex;
+    flex-direction: column;
+    transition: all .3s ease-in-out;
+  }
+
+  &__btns {
+    position: relative;
+    left: -10px;
+    margin-top: 60px;
+
+    @include small-tablet {
+      margin-top: 40px;
+    }
+
+    @include mobile {
+      margin-top: 20px;
+    }
+  }
+
+  &__svg {
+    width: 12px;
+    height: 12px;
+    z-index: 1;
+
+    &--right {
+      transform: rotate(90deg);
+    }
+  }
+
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    right: -30px;
+
+
+    &:hover>.menu__icon-left {
+      transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+    }
+
+    &:hover>.menu__icon-right {
+      transform: translate3d(-45px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+    }
+
+    &:hover>.menu__btn {
+      transform: translate3d(-45px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+    }
+
+  }
+
+  &__btn {
+    padding: 8px 21px;
+    border-radius: 2px;
+    background-color: #F0F0F0;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all .3s ease-in-out;
+    transform: translate3d(0rem, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+
+    @include mobile {
+      font-size: 14px;
+      height: 37px;
+      padding: 10px 10px 10px 10px;
+    }
+
+
+
+  }
+
+  &__icon-left {
+    margin-right: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    background: #F0F0F0;
+    width: 40px;
+    height: 36px;
+    transition: all .3s ease-in-out;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+
+    @include mobile {
+      width: 37px;
+      height: 37px;
+    }
+  }
+
+  &__icon-right {
+    margin-left: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    background: #F0F0F0;
+    width: 40px;
+    height: 36px;
+    transition: all .3s ease-in;
+    transform: translate3d(-32px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+
+    @include mobile {
+      width: 37px;
+      height: 37px;
+    }
+  }
+
+  &__list {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    padding-left: 20px;
+
+
+    @include small-tablet {
+      margin-top: 40px;
+    }
+
+    @include mobile {
+      margin-top: 20px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.07px;
+
+    &--active {
+      position: relative;
+      padding-left: 10px;
+      margin-left: -10px;
+      font-weight: 600 !important;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 7px;
+        left: 0;
+        width: 4px;
+        height: 4px;
+        background-color: #DB9641;
+      }
+    }
+  }
+
+  &__line {
+    margin: 0 20px;
+    margin-bottom: 20px;
+    max-width: 770px;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(240, 240, 240, 1);
+    display: none;
+
+    @include mobile {}
+  }
+
+  &__overlay {
+    padding: 0 30px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @include mobile {
+      gap: 10px;
+    }
+  }
+
+  &__phone {
+    color: #DB9641;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.07px;
+  }
+
+  &__mail {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.07px;
+  }
+
+  &__text {
+    color: #F0F0F0;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 400;
+
+    @include mobile {
+      text-align: left;
+    }
+  }
+
+  &__socials {
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+}

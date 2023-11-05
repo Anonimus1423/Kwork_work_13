@@ -1,0 +1,120 @@
+.about {
+  padding-bottom: 100px;
+
+  @include mobile {
+    padding-bottom: 90px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    margin-bottom: 70px;
+    padding-left: 23px;
+    color: #F0F0F0;
+    font-size: 40px;
+    font-weight: 600;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0;
+      top: 18px;
+      background-image: url(../img/point.svg);
+
+      @include small-tablet {
+        top: 15px;
+      }
+    }
+
+    @include small-tablet {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+
+  }
+
+  &__text {
+    max-width: 690px;
+    margin: 0;
+    margin-bottom: 40px;
+    color: #F0F0F0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+  }
+
+  &__img {
+    margin-right: 310px;
+    @include big-desktop {
+      max-width: 1200px;
+
+
+    }
+
+    @include tablet {
+    }
+
+    @include small-tablet {
+      width: 100%;
+    }
+  }
+
+  &__link {
+    position: relative;
+    padding: 8px 24px;
+    background: #101118;
+    border-radius: 5px;
+    color: #DB9641;
+    font-size: 16px;
+    font-weight: 500;
+
+    border: 0.5px solid transparent;
+    -o-border-image: -o-linear-gradient(130deg, rgb(219, 150, 65) 48%, rgb(16, 17, 24) 90%);
+    border-image: linear-gradient(320deg, rgb(219, 150, 65) 48%, rgb(16, 17, 24) 90%);
+    -webkit-border-image: -webkit-linear-gradient(320deg, rgb(219, 150, 65) 48%, rgb(16, 17, 24) 90%);
+    border-image-slice: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      -webkit-border-image: -webkit-linear-gradient(120deg, rgb(219, 150, 65) 48%, rgb(16, 17, 24) 90%);
+      border-image-slice: 1;
+    }
+
+    &:hover>.about__arrow {
+      transition: all .4s ease-in-out;
+      transform: rotate(90deg);
+    }
+
+
+
+    @include small-tablet {
+      margin: 0 auto;
+      font-size: 14px;
+      padding: 6px 30px 6px 10px;
+    }
+  }
+
+  &__arrow {
+    margin-left: 5px;
+    transition: all .4s ease-in-out;
+    transform: rotate(0deg);
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+}

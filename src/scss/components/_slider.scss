@@ -1,0 +1,323 @@
+.slider {
+  padding-bottom: 60px;
+
+  &__content {
+    padding: 30px 20px;
+    border-radius: 5px;
+    background-color: #0D0E17;
+
+    @include tablet {
+      padding: 30px 10px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    margin-bottom: 30px;
+    padding-left: 23px;
+    color: #F0F0F0;
+    font-size: 40px;
+    font-weight: 600;
+
+    @include small-tablet {
+      max-width: 300px;
+      font-size: 32px;
+    }
+
+    @include mobile {
+      font-size: 22px;
+      max-width: 200px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0;
+      top: 18px;
+      background-image: url(../img/point.svg);
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+  }
+
+  &__btns {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__box {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__animation {
+    position: relative;
+    top: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__cursor {
+    position: relative;
+    animation-name: slide;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    width: 16.479px;
+    height: 19px;
+  }
+
+  &__arrow {
+    width: 50px;
+    height: 10px;
+    fill: rgba(84, 85, 95, 1);
+  }
+
+  &__svg {
+    width: 14px;
+    height: 14px;
+    z-index: 1;
+
+    &--right {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    right: -30px;
+
+
+    &:hover>.slider__icon-left {
+      transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+    }
+
+    &:hover>.slider__icon-right {
+      transform: translate3d(-45px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+    }
+
+    &:hover>.slider__btn {
+      transform: translate3d(-45px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+    }
+
+  }
+
+  &__btn {
+    padding: 8px 21px;
+    border-radius: 2px;
+    background-color: #F0F0F0;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all .3s ease-in-out;
+    transform: translate3d(0rem, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+
+
+
+  }
+
+  &__icon-left {
+    margin-right: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    background: #F0F0F0;
+    width: 40px;
+    height: 36px;
+    transition: all .3s ease-in-out;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+  }
+
+  &__icon-right {
+    margin-left: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    background: #F0F0F0;
+    width: 40px;
+    height: 36px;
+    transition: all .3s ease-in;
+    transform: translate3d(-32px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+  }
+
+  &__inside {
+    position: relative;
+    overflow: hidden;
+
+    &:hover>.slider__inner {
+      bottom: 20px;
+      left: 20px;
+
+      @include small-tablet {
+        left: 10px;
+        bottom: 10px;
+      }
+    }
+
+    &:hover .slider__img {
+      transform: scale(1.1);
+    }
+  }
+
+  &__item {
+    border-radius: 5px;
+
+    @include small-tablet {
+      max-width: 260px;
+      max-height: 480px;
+    }
+  }
+
+  &__inner {
+    max-width: 320px;
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    bottom: -145px;
+    left: 20px;
+    border-radius: 5px;
+    background-color: rgba(16, 17, 24, 1);
+    transition: bottom .5s ease-in-out;
+
+    @include small-tablet {
+      max-width: 200px;
+      left: 10px;
+      bottom: -165px;
+    }
+
+  }
+
+  &__list {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    color: #F0F0F0;
+    font-size: 14px;
+    font-weight: 400;
+
+    @include small-tablet {
+      font-size: 11px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    max-width: 80px;
+    margin: 0 auto;
+    margin-right: 0;
+    align-items: flex-end;
+    padding: 8px 38px 8px 21px;
+    color: #DB9641;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: right;
+    border-radius: 10px;
+    border: .5px solid transparent;
+    border-image: linear-gradient(320deg, rgba(219, 150, 65, 1) 48%, rgba(16, 17, 24, 1) 90%);
+    -moz-border-image: -moz-linear-gradient(320deg, rgba(219, 150, 65, 1) 48%, rgba(16, 17, 24, 1) 90%);
+    -webkit-border-image: -webkit-linear-gradient(320deg, rgba(219, 150, 65, 1) 48%, rgba(16, 17, 24, 1) 90%);
+    border-image-slice: 1;
+    transition: all .5s ease-in-out;
+
+    &:hover {
+      -webkit-border-image: -webkit-linear-gradient(120deg, rgb(219, 150, 65) 48%, rgb(16, 17, 24) 90%);
+      border-image-slice: 1;
+    }
+
+    &:hover>.slider__arrow {
+      transition: all .4s ease-in-out;
+      transform: rotate(90deg);
+    }
+
+
+
+    @include small-tablet {
+      margin: 0 auto;
+      font-size: 14px;
+      padding: 6px 30px 6px 10px;
+    }
+
+  }
+
+  &__arrow {
+    transition: all .4s ease-in-out;
+    transform: rotate(0deg);
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+
+  &__li {
+    display: flex;
+    justify-content: space-between;
+
+
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__img {
+    border-radius: 10px;
+    transition: transform .5s;
+  }
+
+  &__descr {
+    max-width: 317px;
+    margin: 0;
+    margin-top: 40px;
+    color: #F0F0F0;
+    font-size: 20px;
+    font-weight: 500;
+
+    @include tablet {
+      max-width: 230px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  }
+
+}
+
+.swiper-slide {
+  width: 400px;
+  @include small-tablet {
+    width: 260px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 25px;
+  }
+
+  100% {
+    left: 0px;
+  }
+}

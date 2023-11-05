@@ -1,0 +1,160 @@
+.questions {
+  padding-bottom: 120px;
+
+  @include mobile {
+    padding-bottom: 40px;
+  }
+
+  &__content {
+    padding: 95px 20px 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    background: #0D0E17;
+    gap: 50px;
+
+    @include small-tablet {
+      padding-top: 40px;
+      padding: 95px 10px 40px 10px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    padding-left: 20px;
+    color: #F0F0F0;
+    font-size: 40px;
+    font-weight: 600;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0;
+      top: 18px;
+      background-image: url(../img/point.svg);
+
+      @include mobile {
+        top: 10px;
+      }
+    }
+
+    @include small-tablet {
+      font-size: 32px;
+    }
+
+    @include mobile {
+      font-size: 22px;
+    }
+  }
+
+  &__item {
+    max-width: 780px;
+    background-image: url(../img/acardion.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    overflow: hidden;
+    padding-bottom: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+
+    &--active {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    padding-left: 40px;
+    color: #F0F0F0;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    transition: all .3s ease-in;
+
+    &--active {
+      color: #DB9641;
+      margin-bottom: 40px;
+    }
+
+    @include tablet {
+      font-size: 20px;
+      padding-left: 20px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      max-width: 240px;
+    }
+  }
+
+
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+  &__text {
+    padding-left: 40px;
+    margin: 0;
+    margin-right: 80px;
+    color: #F0F0F0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    max-height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-in;
+
+
+    &--active {
+      opacity: 1;
+      visibility: visible;
+      margin-bottom: 20px;
+      max-height: 500px;
+    }
+
+    @include tablet {
+      font-size: 14px;
+      margin-right: 60px;
+      padding-left: 20px;
+    }
+
+    @include mobile {
+      margin-right: 40px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    width: 40px;
+    height: 36px;
+    border-radius: 2px;
+    border: 0.5px solid rgba(240, 240, 240, 0.00);
+    background: #101118;
+    -webkit-border-image: -webkit-linear-gradient(125deg, rgba(240, 240, 240, 0) 15%, rgba(240, 240, 240, 1) 90%);
+    border-image-slice: 1;
+  }
+
+  &__svg {
+    transition: all .3s ease-in;
+    transform: rotate(135deg);
+
+    &--active {
+      transform: rotate(0deg);
+    }
+  }
+}

@@ -1,0 +1,144 @@
+.report {
+  padding-bottom: 80px;
+
+  &__title {
+    max-width: 690px;
+    margin: 0 auto;
+    margin-right: 0;
+    margin-bottom: 120px;
+    color: #F0F0F0;
+    text-align: right;
+    font-size: 40px;
+    font-weight: 700;
+
+    &--two {
+      text-align: left;
+
+    }
+
+
+    @include tablet {
+      font-size: 32px;
+      margin-left: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+  }
+
+  &__item {
+    position: relative;
+    padding: 30px 20px;
+    max-width: 500px;
+    height: 280px;
+    width: 100%;
+
+    @include tablet {
+      max-width: 1000px;
+      height: 200px;
+      padding: 30px 10px;
+    }
+
+    @include small-tablet {
+      max-width: 800px;
+      height: 180px;
+    }
+
+    @include mobile {
+      height: 170px;
+      box-sizing: content-box;
+    }
+
+    &:first-child {
+      @include small-tablet {
+        height: 90px;
+      }
+    }
+
+    &:not(:first-child) {
+      border-radius: 5px;
+      background-color: #101118;
+
+
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -101;
+        margin: -1px;
+        border-radius: inherit;
+        background-image: -o-linear-gradient(310deg, rgb(240, 240, 240) 48%, rgb(16, 17, 24) 90%);
+        background-image: linear-gradient(140deg, rgb(240, 240, 240) 48%, rgb(16, 17, 24) 90%);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background-image: url(../img/trigle.svg);
+        top: -1px;
+        left: -1px;
+      }
+    }
+
+
+
+
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 15px;
+    color: #F0F0F0;
+    font-size: 20px;
+    font-weight: 500;
+
+    @include small-tablet {
+      font-size: 18px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    color: #F0F0F0;
+    font-size: 16px;
+    font-weight: 400;
+
+    @include small-tablet {
+      font-size: 14px ;
+    }
+  }
+
+  &__descr {
+    position: relative;
+    padding-left: 23px;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #F0F0F0;
+    font-size: 24px;
+    font-weight: 500;
+
+    @include small-tablet {
+      font-size: 20px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0;
+      top: 10px;
+      background-image: url(../img/point.svg);
+    }
+  }
+}

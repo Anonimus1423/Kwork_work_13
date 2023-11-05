@@ -1,0 +1,174 @@
+.production {
+  padding-bottom: 70px;
+
+  @include mobile {
+    padding-bottom: 60px;
+  }
+
+  &__content {
+    border-radius: 5px;
+    background: #0D0E17;
+    padding: 30px 20px 46px 20px;
+    margin-bottom: 20px;
+
+    @include tablet {
+      padding: 30px 10px 46px 10px;
+    }
+  }
+
+  &__title {
+
+    position: relative;
+    margin: 0;
+    margin-bottom: 40px;
+    padding-left: 23px;
+    color: #F0F0F0;
+    font-size: 40px;
+    font-weight: 600;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0;
+      top: 18px;
+      background-image: url(../img/point.svg);
+    }
+
+    @include tablet {
+      font-size: 32px;
+      margin-left: 0;
+    }
+
+    @include mobile {
+      font-size: 22px;
+    }
+  }
+
+  &__box {
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: 80px;
+
+    @include small-tablet {
+      gap: 30px;
+    }
+  }
+
+  &__text {
+    max-width: 642px;
+    margin: 0;
+    color: #F0F0F0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    flex-grow: 1;
+    flex-basis: 400px;
+
+    @include small-tablet {
+      font-size: 14px;
+      margin-left: 0px;
+    }
+
+  }
+
+  &__wrapper {
+    position: relative;
+
+  }
+
+  &__list {
+    margin: 0 7%;
+    margin-top: 30px;
+    position: absolute;
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease-in-out;
+
+    &--played {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__item {
+    color: #F0F0F0;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-right: 100px;
+    }
+
+    @include small-tablet {
+      font-size: 10px;
+    }
+  }
+
+  &__video {
+    max-width: 1540px;
+    width: 100%;
+    max-height: 700px;
+  }
+
+  &__play {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    bottom: 30px;
+
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease-in-out;
+
+    &--played {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__name {
+    margin-right: 30px;
+    color: #F0F0F0;
+    font-size: 40px;
+    font-weight: 600;
+
+    @include tablet {
+      font-size: 22px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__svg {
+    @include tablet {
+      width: 40px;
+      height: 40px;
+    }
+
+    @include mobile {
+      width: 24px;
+      height: 24px;
+
+    }
+  }
+}

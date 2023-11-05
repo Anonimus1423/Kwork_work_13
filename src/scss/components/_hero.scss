@@ -1,0 +1,333 @@
+.hero {
+  padding: 15px 0;
+  padding-bottom: 50px;
+
+
+  &__svg {
+    width: 12px;
+    height: 12px;
+    z-index: 1;
+
+    &--right {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    right: -30px;
+
+
+    &:hover>.hero__icon-left {
+      transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+    }
+
+    &:hover>.hero__icon-right {
+      transform: translate3d(-45px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+    }
+
+    &:hover>.hero__btn {
+      transform: translate3d(-45px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+    }
+
+  }
+
+  &__btn {
+    padding: 8px 21px;
+    border-radius: 2px;
+    background-color: #F0F0F0;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all .4s ease-in-out;
+    transform: translate3d(0rem, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+
+    @include mobile {
+      font-size: 14px;
+      height: 36px;
+      padding: 11px 11px;
+    }
+
+  }
+
+  &__icon-left {
+    margin-right: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    background: #F0F0F0;
+    width: 40px;
+    height: 37px;
+    transition: all .3s ease-in-out;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+
+    @include mobile {
+      width: 37px;
+      height: 36px;
+    }
+  }
+
+  &__icon-right {
+    margin-left: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    background: #F0F0F0;
+    width: 40px;
+    height: 37px;
+    transition: all .3s ease-in;
+    transform: translate3d(-32px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+
+    @include mobile {
+      width: 37px;
+      height: 36px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  &__projects {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+
+    @include small-tablet {
+      justify-content: center;
+
+    }
+
+    @include tablet {
+
+      justify-content: center;
+    }
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+
+    background: #0D0E17;
+    width: 440px;
+    max-height: 610px;
+
+    @include tablet {
+      max-width: 440px;
+      width: 100%;
+      background-color: #101118;
+    }
+
+    @include small-tablet {
+
+    }
+
+    @include mobile {
+      max-width: 440px;
+      width: 100%;
+    }
+
+  }
+
+  &__img {
+    margin: 0 auto;
+    max-width: 430px;
+    max-height: 635px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 7px;
+    transition: all .5s ease-in-out;
+
+    &:hover {
+      transition: all .5s ease-in-out;
+      transform: scale(1.1);
+    }
+
+    &:hover>.hero__link::after {
+      transform: rotate(900deg);
+    }
+
+
+
+    @include tablet {
+      width: 100%;
+    }
+
+  }
+
+  &__link {
+    position: relative;
+    padding-right: 13px;
+    left: 25px;
+    bottom: 35px;
+    color: #F0F0F0;
+    font-size: 16px;
+    font-weight: 400;
+
+    @include mobile {
+      font-size: 14px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 7px;
+      background-image: url(../img/ar.svg);
+      bottom: 5px;
+      right: 0px;
+      transition: all .3s ease-in-out;
+      transform: rotate(0deg);
+    }
+  }
+
+  &__inner {
+    max-width: 600px;
+    width: 100%;
+    padding: 50px 30px;
+    border-radius: 5px;
+    background: #0D0E17;
+
+    @include big-desktop {
+      max-width: 1500px;
+    }
+
+    @include small-tablet {
+      padding: 30px 10px 30px 10px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    padding-left: 23px;
+    margin: 0;
+    margin-bottom: 20px;
+    max-width: 495px;
+    color: #F0F0F0;
+    font-size: 40px;
+    font-weight: 600;
+
+    @include tablet {
+      font-size: 32px;
+      max-width: 400px;
+    }
+
+    @include mobile {
+      font-size: 25px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0;
+      top: 18px;
+      background-image: url(../img/point.svg);
+    }
+  }
+
+  &__accent {
+    color: #DB9641;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 100px;
+    max-width: 555px;
+    padding-left: 23px;
+    color: #F0F0F0;
+    font-size: 24px;
+    font-weight: 500;
+
+    @include tablet {
+      font-size: 18px;
+      max-width: 410px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 30px;
+    width: 455px;
+    color: #F0F0F0;
+    font-size: 18px;
+    font-weight: 400;
+
+    @include tablet {
+      font-size: 16px;
+      max-width: 410px;
+      width: 100%;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -30px;
+    flex-wrap: wrap;
+  }
+
+  &__button {
+    position: relative;
+    margin-left: 30px;
+    color: #DEDEDE;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      &::after {
+        width: 100%;
+        visibility: visible;
+      }
+    }
+
+    &::after {
+      transition: all .3s ease-in-out;
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      bottom: -1px;
+      left: 0;
+      background-color: #F0F0F0;
+      visibility: hidden;
+    }
+
+    @include mobile {
+      margin-top: 20px;
+    }
+  }
+
+}
+
+.hero__item:hover .hero__link::after {
+  transition: all .3s ease-in-out;
+  transform: rotate(90deg);
+}

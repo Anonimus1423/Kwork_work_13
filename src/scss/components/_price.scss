@@ -1,0 +1,128 @@
+.price {
+  padding-bottom: 120px;
+
+  &__title {
+    position: relative;
+    margin: 0;
+    margin-bottom: 30px;
+    padding-left: 23px;
+    color: #F0F0F0;
+    font-size: 40px;
+    font-weight: 600;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0;
+      top: 18px;
+      background-image: url(../img/point.svg);
+
+      @include mobile {
+        top: 10px;
+      }
+    }
+
+    @include small-tablet {
+      font-size: 32px;
+    }
+
+    @include mobile {
+      font-size: 22px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 30px 20px 50px 20px;
+    border-radius: 5px;
+    color: #DB9641;
+    font-size: 16px;
+    font-weight: 500;
+    background: #0D0E17;
+
+    @include tablet {
+      padding: 30px 10px 50px 10px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -101;
+      margin: -1px;
+      border-radius: inherit;
+      background-image: linear-gradient(140deg, rgba(240, 240, 240, 1) 48%, rgba(16, 17, 24, 1) 90%);
+    }
+  }
+
+  &__list {
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__descr {
+    color: #F0F0F0;
+    font-size: 20px;
+    font-weight: 400;
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__link {
+  position: relative;
+    display: flex;
+    max-width: 170px;
+    margin: 0 auto;
+    margin-left: 0;
+    padding: 8px 21px 8px 21px;
+    color: #DB9641;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: right;
+    border-radius: 10px;
+    border: .5px solid transparent;
+    border-image: linear-gradient(320deg, rgba(219, 150, 65, 1) 48%, rgba(16, 17, 24, 1) 90%);
+    -moz-border-image: -moz-linear-gradient(320deg, rgba(219, 150, 65, 1) 48%, rgba(16, 17, 24, 1) 90%);
+    -webkit-border-image: -webkit-linear-gradient(320deg, rgba(219, 150, 65, 1) 48%, rgba(16, 17, 24, 1) 90%);
+    border-image-slice: 1;
+    transition: all .5s ease-in-out;
+
+    &:hover {
+      -webkit-border-image: -webkit-linear-gradient(120deg, rgb(219, 150, 65) 48%, rgb(16, 17, 24) 90%);
+      border-image-slice: 1;
+    }
+
+    &:hover>.price__arrow {
+      transition: all .4s ease-in-out;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__arrow {
+    transition: all .4s ease-in-out;
+    transform: rotate(0deg);
+    margin-left: 10px;
+    width: 10px;
+    height: 10px;
+    margin-top: 5px;
+  }
+}

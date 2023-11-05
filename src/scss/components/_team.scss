@@ -1,0 +1,92 @@
+.team {
+  padding-bottom: 60px;
+
+  &__title {
+    position: relative;
+    margin: 0;
+    margin-bottom: 30px;
+    padding-left: 23px;
+    color: #F0F0F0;
+    font-size: 40px;
+    font-weight: 600;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0;
+      top: 18px;
+      background-image: url(../img/point.svg);
+
+      @include mobile {
+        top: 10px;
+      }
+    }
+
+    @include small-tablet {
+      font-size: 32px;
+    }
+
+
+    @include mobile {
+      font-size: 22px;
+    }
+  }
+
+  &__wrapper{
+    padding: 40px 30px 60px 30px;
+    border-radius: 5px;
+    background: #0D0E17;
+
+    @include tablet {
+      padding: 40px 10px 60px 10px;
+    }
+  }
+
+  &__swiper {}
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    border-radius: 2px;
+
+    @include mobile {
+      max-width: 270px;
+      max-height: 390px;
+    }
+  }
+
+  &__name {
+    margin: 15px 0 5px 0;
+    color: #F0F0F0;
+    font-size: 20px;
+    font-weight: 600;
+
+    @include small-tablet {
+      font-size: 18px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__position {
+    margin: 0;
+    color: #F0F0F0;
+    font-size: 18px;
+    font-weight: 400;
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+}

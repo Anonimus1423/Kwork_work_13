@@ -1,0 +1,9 @@
+import './components/swiper';
+import './components/acardion';
+import './components/video';
+import './components/header';
+import './components/aos';
+import './components/quiz';
+import './components/burger';
+import './components/modal';
+import './components/validate';

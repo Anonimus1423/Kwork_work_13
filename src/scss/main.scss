@@ -1,0 +1,35 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/slider";
+@import "./components/hero";
+@import "./components/hero-two";
+@import "./components/report";
+@import "./components/steps";
+@import "./components/letters";
+@import "./components/audit";
+@import "./components/about";
+@import "./components/production";
+@import "./components/see";
+@import "./components/reviews";
+@import "./components/form";
+@import "./components/questions";
+@import "./components/footer";
+@import "./components/quiz";
+@import "./components/comp";
+@import "./components/report-two";
+@import "./components/grid";
+@import "./components/team";
+@import "./components/projects";
+@import "./components/move";
+@import "./components/features";
+@import "./components/price";
+@import "./components/project-inner";
+@import "./components/video";
+@import "./components/menu";
+@import "./components/modal"
