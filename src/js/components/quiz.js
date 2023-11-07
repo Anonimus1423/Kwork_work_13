@@ -42,7 +42,10 @@ if (form) {
       }
 
       if (count === 5) {
+        document.getElementById("quiz").style = 'height: 594px !important;';
+        document.getElementById("qbtn").style = 'margin-top: 50px;';
         btnNext.style.visibility = 'hidden';
+        content.style = "pointer-events: none;";
       }
     });
 

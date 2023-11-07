@@ -2,8 +2,13 @@
   padding-top: 100px;
   padding-bottom: 150px;
 
-  @include mobile {
-    padding-bottom: 120px;
+  @include tablet
+  {
+      padding-bottom: 120px;
+  }
+  @include mobile
+  {
+      padding-top: 60px;
   }
 
   &__title {

@@ -1,0 +1,31 @@
+.see-more-e
+{
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    left: 100%;
+    transition: 0.3s;
+    padding-bottom: px;
+    transform: translateX(-100%);
+    p
+    {
+        color: #F0F0F0;
+        font-family: Rubik;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-right: 7px;
+    }
+    svg
+    {
+        width: 7px;
+        position: relative;
+        top: 1px;
+    }
+    &:hover
+    {
+        opacity: .7;
+    }
+}

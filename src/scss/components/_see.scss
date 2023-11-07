@@ -194,7 +194,7 @@
       background-image: url(../img/point.svg);
 
       @include mobile {
-        top: 10px;
+        top: 8px;
       }
     }
 
@@ -218,8 +218,8 @@
 
     @include tablet {
       padding-top: 40px;
-      padding: 70px 10px 40px 10px;
-      gap: 80px;
+      padding: 30px 27px 40px 10px;
+      gap: 40px;
     }
   }
 
@@ -228,6 +228,11 @@
 
     &:first-child {
       margin-right: 60px;
+
+      @include tablet {
+        margin-left: 0;
+        margin-right: 47px !important;
+      }
     }
 
     &:last-child {
@@ -235,11 +240,10 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-
-      @include tablet {
-        margin-left: 0;
+      @include mobile
+      {
+        margin-left: 0px !important;
       }
-
     }
   }
 
@@ -268,6 +272,11 @@
     font-size: 16px;
     font-weight: 400;
 
+    @include tablet
+    {
+      max-width: none;
+      min-width: 100%;
+    }
     @include small-tablet {
       font-size: 14px;
     }
@@ -296,6 +305,15 @@
     margin-bottom: 5px;
     display: flex;
     gap: 50px;
+    @include mobile
+    {
+      gap: 0;
+      span
+      {
+        min-width: 100px;
+        width: 100px;
+      }
+    }    
   }
 
   &__map {
@@ -374,7 +392,11 @@
     line-height: normal;
     left: 0;
     bottom: 0;
-    margin-left: 20px;
+    margin-left: 50px;
+    @include mobile
+    {
+      margin-left: 20px;
+    }
   }
 
 }

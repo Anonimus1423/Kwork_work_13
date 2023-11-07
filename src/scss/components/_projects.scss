@@ -31,6 +31,18 @@
     color: #F0F0F0;
     font-size: 40px;
     font-weight: 600;
+    @include tablet
+    {
+      color: #F0F0F0;
+      font-family: Rubik;
+      font-size: 32px;
+      font-style: normal;
+      margin-left: 3px;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 85px;
+    }
+
 
     &::before {
       content: '';
@@ -41,6 +53,19 @@
       top: 18px;
       background-image: url(../img/point.svg);
     }
+    @include mobile
+    {
+      color: #F0F0F0;
+      font-family: Rubik;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 35px;
+      &::before {
+        top: 9px;
+      }
+    }
   }
 
   &__item {
@@ -48,6 +73,7 @@
     width: 100%;
     border-radius: 5px;
     flex-grow: 1;
+    cursor: pointer;
 
     @include big-desktop {
       max-width: 450px;
@@ -78,9 +104,14 @@
         left: 5px;
         bottom: 5px;
       }
+    }
+    
 
-      @include mobile {
-        left: 5px;
+    @include small-tablet {
+      >.projects__inner
+      {
+        left: 5px !important;
+        bottom: 10px !important;
       }
     }
 
@@ -94,7 +125,7 @@
     width: 100%;
     padding: 20px;
     position: absolute;
-    bottom: -145px;
+    bottom: -155px;
     left: 20px;
     border-radius: 5px;
     background-color: rgba(16, 17, 24, 1);
@@ -108,6 +139,47 @@
       max-width: 97.5%;
       left: 5px;
       bottom: -164px;
+    }
+
+    @include small-tablet
+    {
+      .projects__link
+      {
+        display: none;
+      }
+      .projects__list 
+      {
+        margin-bottom: 0;
+      }
+    }
+    @include mobile
+    {
+      .projects__link
+      {
+        display: inline-flex;
+        border: none;
+        color: #DB9641;
+font-family: Rubik;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+        position: relative;
+        left: 100%;
+        transform: translateX(-100%);
+        padding: 0;
+        
+img
+{
+  width: 8px;
+  margin-left: 7px;
+  margin-bottom: 4px;
+}
+      }
+      .projects__list 
+      {
+        margin-bottom: 20px;
+      }
     }
 
     @include mobile {
@@ -224,7 +296,53 @@
     font-size: 20px;
     font-weight: 500;
 
+    @include small-tablet
+    {
+      color: #F0F0F0;
+      font-family: Rubik;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      
+    }
     @include mobile {
+      display: none;
+    }
+    
+  }
+  
+  .tablet-link
+  {
+    display: none;
+    border: 0px;
+    padding: 0;
+    color: #DB9641;
+font-family: Rubik;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+img
+{
+  width: 8px;
+  margin-left: 7px;
+  margin-bottom: 4px;
+}
+  }
+  @include small-tablet
+  {
+    .tablet-link
+    {
+      display: inline-flex;
+    }
+  }
+  @include mobile
+  {
+    .tablet-link
+    {
       display: none;
     }
   }

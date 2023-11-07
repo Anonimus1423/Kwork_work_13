@@ -7,7 +7,7 @@
     background: #0D0E17;
 
     @include tablet {
-      padding: 100px 10px 30px 10px;
+      padding: 30px 10px 30px 10px;
     }
   }
 
@@ -45,7 +45,7 @@
       background-image: url(../img/point.svg);
 
       @include mobile {
-        top: 10px;
+        top: 8px;
       }
     }
 
@@ -156,7 +156,15 @@
 
     &:hover>.move__inner {
       transition: all .5s ease-in-out;
-      bottom: 20px;
+      bottom: 32px;
+    }
+    @include mobile 
+    {
+      .move__inner
+      {
+        left: 7px;
+        bottom: 7px !important;
+      }
     }
 
     &:hover .move__img {

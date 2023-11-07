@@ -10,7 +10,12 @@
       padding: 30px 10px;
     }
   }
-
+  .slider__arrow
+  {
+    position: relative;
+    left: -11px;
+    width: 50px;
+  }
   &__title {
     position: relative;
     margin: 0;
@@ -26,7 +31,7 @@
     }
 
     @include mobile {
-      font-size: 22px;
+      font-size: 20px;
       max-width: 200px;
     }
 
@@ -38,7 +43,12 @@
       left: 0;
       top: 18px;
       background-image: url(../img/point.svg);
+      @include mobile
+      {
+        top: 7px;
+      }
     }
+
   }
 
   &__top {
@@ -61,9 +71,19 @@
 
   &__animation {
     position: relative;
-    top: 8px;
+    top: 5px;
+    left: 40px;
     display: flex;
     flex-direction: column;
+    @include tablet {
+      top: 10px;
+      left: 0;
+    }
+    @include mobile
+    {
+      top: 30px;
+      left: -7px;
+    }
   }
 
   &__cursor {
@@ -71,14 +91,24 @@
     animation-name: slide;
     animation-duration: 4s;
     animation-iteration-count: infinite;
-    width: 16.479px;
-    height: 19px;
+    width: 19px;
+    height: 21px;
+    @include mobile
+    {
+        width: 10px;
+        height: 10px;
+        margin-left: -5px;
+    }
   }
 
   &__arrow {
     width: 50px;
     height: 10px;
     fill: rgba(84, 85, 95, 1);
+    @include mobile
+    {
+        width: 30px !important;
+    }
   }
 
   &__svg {
@@ -160,14 +190,16 @@
   &__inside {
     position: relative;
     overflow: hidden;
-
+    border-radius: 10px;
     &:hover>.slider__inner {
       bottom: 20px;
       left: 20px;
-
-      @include small-tablet {
-        left: 10px;
-        bottom: 10px;
+    }
+    @include small-tablet {
+      .slider__inner
+      {
+        left: 7px !important;
+        bottom: 10px !important;
       }
     }
 
@@ -190,7 +222,7 @@
     width: 100%;
     padding: 20px;
     position: absolute;
-    bottom: -145px;
+    bottom: -155px;
     left: 20px;
     border-radius: 5px;
     background-color: rgba(16, 17, 24, 1);
@@ -247,7 +279,10 @@
       transition: all .4s ease-in-out;
       transform: rotate(90deg);
     }
-
+    img
+    {
+      left: 0px !important;
+    }
 
 
     @include small-tablet {
@@ -300,7 +335,7 @@
 .swiper-slide {
   width: 400px;
   @include small-tablet {
-    width: 260px;
+    width: 254px;
   }
 
   &:not(:last-child) {

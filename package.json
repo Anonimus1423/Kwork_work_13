@@ -10,7 +10,8 @@
     "cache": "gulp cache",
     "backend": "gulp backend",
     "zip": "gulp zip",
-    "code": "editorconfig-checker"
+    "code": "editorconfig-checker",
+    "svgSprite": "gulp svgSprite"
   },
   "author": "MaxGraph",
   "license": "ISC",

@@ -83,7 +83,7 @@ const svgSprites = () => {
     .pipe(svgSprite({
       mode: {
         stack: {
-          sprite: "../sprite.svg"
+          sprite: "../sprite/sprite.svg"
         }
       },
     }))
@@ -333,3 +333,5 @@ exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, i
 exports.cache = series(cache, rewrite);
 
 exports.zip = zipFiles;
+
+exports.svgSprite = svgSprites;

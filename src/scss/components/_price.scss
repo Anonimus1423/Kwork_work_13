@@ -1,5 +1,5 @@
 .price {
-  padding-bottom: 120px;
+  padding-bottom: 40px;
 
   &__title {
     position: relative;
@@ -9,14 +9,18 @@
     color: #F0F0F0;
     font-size: 40px;
     font-weight: 600;
-
+      
+    @include tablet
+    {
+      margin-bottom: 40px;
+    }
     &::before {
       content: '';
       position: absolute;
       width: 8px;
       height: 8px;
       left: 0;
-      top: 18px;
+      top: 13px;
       background-image: url(../img/point.svg);
 
       @include mobile {
@@ -43,7 +47,7 @@
     background: #0D0E17;
 
     @include tablet {
-      padding: 30px 10px 50px 10px;
+      padding: 30px 10px 39px 10px;
     }
 
     &::after {
@@ -62,6 +66,10 @@
 
   &__list {
     margin-bottom: 40px;
+    @include tablet
+    {
+      margin-bottom: 0;
+    }
   }
 
   &__item {
@@ -70,6 +78,13 @@
 
     &:not(:last-child) {
       margin-bottom: 18px;
+    }
+
+    @include tablet
+    {
+      &:not(:last-child) {
+        margin-bottom: 9px;
+      }
     }
   }
 
@@ -84,6 +99,11 @@
 
     @include mobile {
       font-size: 14px;
+      &:last-child
+      {
+        white-space: nowrap;
+        margin-left: 5px;
+      }
     }
   }
 

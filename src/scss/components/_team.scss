@@ -1,6 +1,9 @@
 .team {
   padding-bottom: 60px;
-
+  @include tablet
+  {
+    position: relative;
+  }
   &__title {
     position: relative;
     margin: 0;

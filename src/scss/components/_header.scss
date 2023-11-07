@@ -41,6 +41,23 @@
       transform-style: preserve-3d;
     }
 
+    @media screen and (max-width: 400px) {
+      &:hover>.header__icon-left {
+        transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+      }
+
+      &:hover>.header__icon-right {
+        transform: translate3d(-32px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+      }
+
+      &:hover>.header__btn {
+        transform: translate3d(-32px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+      }
+    }
+
   }
 
   &__btn {
@@ -53,14 +70,19 @@
     transition: all .3s ease-in-out;
     transform: translate3d(0rem, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
-
+    
     @include mobile {
       font-size: 14px;
       height: 37px;
       padding: 10px 10px 10px 10px;
+      margin-bottom: 40px;
     }
 
-
+    @media screen and (max-width: 400px) {
+      font-size: 12px;
+      height: auto !important;
+      padding: 9px;
+    }
   }
 
   &__icon-left {
@@ -79,6 +101,11 @@
     @include mobile {
       width: 37px;
       height: 37px;
+    }
+    
+    @media screen and (max-width: 400px) {
+      width: 32px;
+      height: 32px;
     }
   }
 
@@ -99,6 +126,11 @@
       width: 37px;
       height: 37px;
     }
+
+    @media screen and (max-width: 400px) {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   &__content {
@@ -109,13 +141,21 @@
     align-items: center;
     justify-content: space-between;
 
+    @include mobile
+    {
+      padding: 5px 10px;
+    }
     @include big-desktop {
       justify-content: space-between;
     }
   }
 
   &__logo {
-    margin-right: 50px
+    margin-right: 50px;
+    @include mobile
+    {
+      width: 159px;
+    }
   }
 
   &__list {
@@ -350,7 +390,11 @@
       display: block;
 
     }
-
+    @include mobile
+    {
+      width: 38px;
+      height: 26px;
+    }
 
   }
 

@@ -1,11 +1,28 @@
 .grid {
   padding-bottom: 120px;
 
+  @include tablet
+  {
+    padding-bottom: 80px;
+  }
+  @include mobile
+  {
+    
+  }
+
   &__content {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 30px;
+
+    @include mobile
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
 
     @include tablet {
       grid-template-columns: repeat(1, 1fr);
@@ -16,6 +33,9 @@
     @include tablet {
 
       gap: 20px;
+    }
+    @include mobile {
+      gap: 0px !important;
     }
   }
 
@@ -55,7 +75,14 @@
 
 
 
-
+    @include mobile
+    {
+      margin-bottom: 30px;
+      &:last-child
+      {
+        margin-bottom: 0;
+      }
+    }
     &:nth-child(1) {
       grid-column: 1 / 3;
       grid-row: 1;
@@ -113,7 +140,11 @@
     }
 
     @include tablet {
-      font-size: 40px;
+font-family: Rubik;
+font-size: 64px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
     }
   }
 
@@ -125,6 +156,15 @@
 
     @include mobile {
       font-size: 12px;
+    }
+    
+    @include tablet
+    {
+      font-family: Rubik;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
     }
   }
 
@@ -160,5 +200,19 @@
   100% {
     transform: translate3d(0, 0, 0);
     visibility: visible;
+  }
+}
+@media screen and (max-width: 610px) {
+  .grid__title
+  {
+    font-size: 40px;
+  }
+  .grid__text
+  {
+    font-size: 14px;
+  }
+  .grid__content
+  {
+    gap: 15px;
   }
 }

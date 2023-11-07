@@ -7,9 +7,13 @@
 
   &__content {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     flex-wrap: wrap;
     gap: 60px;
+    @include mobile
+    {
+      gap: 0;
+    }
   }
 
   &__title {
@@ -58,14 +62,18 @@
   }
 
   &__img {
-    margin-right: 310px;
+    margin-right: 200px;
+    width: 85%;
+    display: block;
+    margin-top: -80px;
+    margin-left: 80px;
     @include big-desktop {
-      max-width: 1200px;
-
-
-    }
-
-    @include tablet {
+      max-width: none;
+      margin-right: 0px;
+      width: 100%;
+      display: block;
+      margin-top: 10px;
+      margin-left: 0px;
     }
 
     @include small-tablet {

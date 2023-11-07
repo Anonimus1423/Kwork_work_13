@@ -2,6 +2,10 @@
   padding: 15px 0;
   padding-bottom: 50px;
 
+  @include tablet
+  {
+    padding-bottom: 120px;
+  }
   &__content {
     display: flex;
     gap: 20px;
@@ -45,13 +49,17 @@
     padding: 60px 30px;
     border-radius: 5px;
     background: #0D0E17;
-
     @include big-desktop {
       max-width: 1300px;
     }
 
     @include tablet {
       padding: 60px 10px;
+    }
+
+    @include mobile
+    {
+      padding-top: 37px !important;
     }
   }
 
@@ -86,6 +94,7 @@
 
     @include mobile {
       font-size: 22px;
+      margin-bottom: 87px;
     }
   }
 
@@ -111,10 +120,16 @@
     font-size: 18px;
     font-weight: 400;
 
-
     @include mobile {
       width: 300px;
       font-size: 16px;
+      color: #F0F0F0;
+      font-family: Rubik;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      width: auto;
     }
 
   }
@@ -135,7 +150,13 @@
     font-size: 16px;
     font-weight: 500;
     transition: all .3s ease-in-out;
-
+    @include tablet
+    {
+      margin-left: 0px;
+    }
+    @media screen and (max-width: 520px) {
+      margin-left: 30px;
+    }
     &:hover {
       transition: all .3s ease-in-out;
       &::after {

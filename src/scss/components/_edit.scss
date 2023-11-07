@@ -1,0 +1,125 @@
+.see-more.closed
+{
+    display: none !important;
+}
+*
+{
+    scroll-behavior: smooth;  
+}
+.brr
+{
+    @include tablet 
+    {
+        display: none !important;
+    }
+}
+.none-tablet
+{
+    display: block !important;
+    @include tablet
+    {
+        display: none !important;
+    }
+}
+.none-tablet-inline
+{
+    display: inline-block !important;
+    @include tablet
+    {
+        display: none !important;
+    }
+}
+.tablet
+{
+    display: none;
+    @include tablet
+    {
+        display:  block;
+    }
+}
+.none-mobile
+{
+    display: block !important;
+    @include mobile
+    {
+        display: none !important;
+    }
+}
+.none-mobile-inline
+{
+    display: inline-block !important;
+    @include mobile
+    {
+        display: none !important;
+    }
+}
+.mobile
+{
+    display: none;
+    @include mobile
+    {
+        display:  block;
+    }
+}
+.sae
+{
+    position: absolute;
+    left: 100%;
+    top: 43px;
+    z-index: 10;
+    transform: translateX(-100%) translateX(-25px);
+    .slider__cursor 
+    {
+        transform: translate(10px, 3px);
+    }
+}
+@media screen and (max-width: 850px) {
+    .sae
+    {
+        position: absolute;
+        left: 100%;
+        top: 38px;
+        z-index: 10;
+        transform: translateX(-100%) translateX(-25px);
+        .slider__cursor 
+        {
+            transform: translate(10px, 3px);
+        }
+    } 
+}
+footer .footer__link.header__link--active
+{
+    margin-left: 2.5px !important;
+}
+header .menu__link.menu__link--active
+{
+    margin-left: 1px !important;
+}
+.sse, .swiper.team__swiper
+{
+    @include mobile
+    {
+        overflow: visible !important;
+    }
+}
+.team__wrapper{
+    overflow: hidden;
+}
+.mr0
+{
+    margin-right: 0 !important;
+}
+.swiper-sliderr
+{
+    display: none;
+    @media screen and (max-width: 620px) {
+    display: flex;
+    }
+}
+.spe
+{
+    display: flex;
+    @media screen and (max-width: 620px) {
+    display: none;
+    }
+}

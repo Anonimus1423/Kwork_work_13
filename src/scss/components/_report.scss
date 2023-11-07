@@ -16,10 +16,21 @@
 
     }
 
+    @include mobile
+    {
+      color: #F0F0F0;
+      text-align: right;
+      font-family: Rubik;
+      font-size: 26px !important;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
 
     @include tablet {
       font-size: 32px;
       margin-left: 0;
+      margin-bottom: 100px;
     }
   }
 
@@ -36,16 +47,43 @@
     max-width: 500px;
     height: 280px;
     width: 100%;
-
+    
     @include tablet {
       max-width: 1000px;
-      height: 200px;
+      height: 205px;
       padding: 30px 10px;
+    }
+    @include mobile {
+      &:first-child
+      {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      h3
+      {
+        text-align: left;
+      }
+    }
+    &:not(:first-child)
+    {
+      @include mobile
+      {
+        box-sizing: border-box;
+        height: 264px !important;
+      }
+    }
+    &:last-child
+    {
+      @include mobile
+      {
+        box-sizing: border-box;
+        height: 284px !important;
+      }
     }
 
     @include small-tablet {
       max-width: 800px;
-      height: 180px;
+      height: 205px;
     }
 
     @include mobile {
