@@ -77,9 +77,9 @@
     &--active {
       padding-bottom: 20px;
     }
-
     @include tablet {
       max-width: 1050px;
+      margin-right: 0px;
     }
     @include mobile
     {

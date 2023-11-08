@@ -105,31 +105,31 @@ if (reviews) {
 
 
     if (scrollTop > reviewsCenter + 1200) {
-      rowThree.style.transform = 'translateX(-550px)';
-      rowFour.style.transform = 'translateX(-690px)';
+      rowThree.style.transform = 'translateX(-400px)';
+      rowFour.style.transform = 'translateX(-800px)';
 
     } else if (scrollTop > reviewsCenter + 1000) {
-      rowThree.style.transform = 'translateX(-510px)';
-      rowFour.style.transform = 'translateX(-790px)';
-    } else if (scrollTop > reviewsCenter + 800) {
-      rowThree.style.transform = 'translateX(-390px)';
+      rowThree.style.transform = 'translateX(-350px)';
       rowFour.style.transform = 'translateX(-850px)';
+    } else if (scrollTop > reviewsCenter + 800) {
+      rowThree.style.transform = 'translateX(-300px)';
+      rowFour.style.transform = 'translateX(-875px)';
     } else if (scrollTop > reviewsCenter + 600) {
       rowThree.style.transform = 'translateX(-250px)';
       rowFour.style.transform = 'translateX(-900px)';
     }
     else if (scrollTop > reviewsCenter + 400) {
-      rowThree.style.transform = 'translateX(-160px)';
-      rowFour.style.transform = 'translateX(-950px)';
+      rowThree.style.transform = 'translateX(-200px)';
+      rowFour.style.transform = 'translateX(-925px)';
     } else if (scrollTop > reviewsCenter + 200) {
-      rowThree.style.transform = 'translateX(-80px)';
-      rowFour.style.transform = 'translateX(-1000px)';
+      rowThree.style.transform = 'translateX(-150px)';
+      rowFour.style.transform = 'translateX(-950px)';
     } else if (scrollTop > reviewsCenter - 100) {
-      rowThree.style.transform = 'translateX(0px)';
-      rowFour.style.transform = 'translateX(-1050px)';
+      rowThree.style.transform = 'translateX(75px)';
+      rowFour.style.transform = 'translateX(-965px)';
     } else if (scrollTop > reviewsCenter - 300) {
-      rowThree.style.transform = 'translateX(100px)';
-      rowFour.style.transform = 'translateX(-1100px)';
+      rowThree.style.transform = 'translateX(0px)';
+      rowFour.style.transform = 'translateX(-1000px)';
     }
 
   });

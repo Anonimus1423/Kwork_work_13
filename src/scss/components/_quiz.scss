@@ -240,7 +240,6 @@
       width: 400px;
     }
 
-
     &::after {
       content: '';
       position: absolute;
@@ -251,7 +250,6 @@
       border-color: transparent transparent #0d0e17 transparent;
       right: 0;
       bottom: 0;
-
     }
     
     &:first-child {
@@ -544,7 +542,9 @@
     padding-top: 25px;
     padding-bottom: 20px;
     display: flex;
+    margin-top: 0px !important;
     left: 0;
+    padding-top: 7px;
 
     .form__wrapper
     {
@@ -558,6 +558,9 @@
       margin-top: 30px !important;
       padding-bottom: 10px;
       padding-top: 15px;
+    }
+    @media screen and (max-width: 1420px) {
+      margin-top: 50px !important;
     }
   }
 

@@ -17,7 +17,7 @@ const swiper = new Swiper(".slider__swiper", {
 
 const s = new Swiper(".swiper-sliderr", {
   slidesPerView: 1,
-  spacebetween: 20,
+  spacebetween: 15,
   observer: true,
   observeParents: true
 })
